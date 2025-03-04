@@ -1,1 +1,196 @@
 
+
+---------------------
+⋙ ❍ Изменение атрибутов:
+---
+1. Добавление атрибута к элементу
+⌛ Задача: Добавьте атрибут `id` с значением `newId` к элементу.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+element.setAttribute('id', 'newId');
+
+console.log(element.id); // "newId"
+```
+Объяснение: Метод `setAttribute` используется для добавления или изменения значения атрибута.
+---
+2. Получение значения атрибута
+⌛ Задача: Получите значение атрибута `data-info` у элемента.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+const dataInfo = element.getAttribute('data-info');
+
+console.log(dataInfo);
+```
+Объяснение: Метод `getAttribute` возвращает значение указанного атрибута.
+---
+3. Удаление атрибута
+⌛ Задача: Удалите атрибут `disabled` у кнопки.
+🎯 Решение:
+```javascript
+const button = document.querySelector('button');
+button.removeAttribute('disabled');
+
+console.log(button.hasAttribute('disabled')); // false
+```
+Объяснение: Метод `removeAttribute` удаляет указанный атрибут.
+---
+4. Проверка наличия атрибута
+⌛ Задача: Проверьте, есть ли у элемента атрибут `data-visible`.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+const hasAttr = element.hasAttribute('data-visible');
+
+console.log(hasAttr); // true или false
+```
+Объяснение: Метод `hasAttribute` возвращает `true`, если атрибут существует.
+---
+5. Изменение значения атрибута
+⌛ Задача: Измените значение атрибута `src` у изображения.
+🎯 Решение:
+```javascript
+const img = document.querySelector('img');
+img.setAttribute('src', 'new-image.jpg');
+
+console.log(img.src); // Абсолютный URL нового изображения
+```
+Объяснение: Используйте `setAttribute` для изменения значения атрибута.
+---
+6. Работа с `dataset`
+⌛ Задача: Добавьте значение `active` в атрибут `data-status`.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+element.dataset.status = 'active';
+
+console.log(element.dataset.status); // "active"
+```
+Объяснение: `dataset` — это объект для работы с `data-*` атрибутами.
+---
+7. Удаление атрибута через `dataset`
+⌛ Задача: Удалите атрибут `data-status`.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+delete element.dataset.status;
+
+console.log(element.hasAttribute('data-status')); // false
+```
+Объяснение: С помощью `delete` можно удалить `data-*` атрибут.
+---
+8. Динамическое добавление нескольких атрибутов
+⌛ Задача: Добавьте атрибуты `class` и `title` к элементу.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+element.setAttribute('class', 'highlight');
+element.setAttribute('title', 'Hover text');
+
+console.log(element.className); // "highlight"
+console.log(element.title); // "Hover text"
+```
+Объяснение: `setAttribute` позволяет добавлять сразу несколько атрибутов.
+---
+9. Добавление CSS-класса через атрибуты
+⌛ Задача: Добавьте класс `active` к элементу через `classList`.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+element.classList.add('active');
+
+console.log(element.className); // Содержит "active"
+```
+Объяснение: `classList` — это удобный способ работы с классами элемента.
+---
+10. Проверка наличия класса
+⌛ Задача: Проверьте, содержит ли элемент класс `hidden`.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+const hasClass = element.classList.contains('hidden');
+
+console.log(hasClass); // true или false
+```
+Объяснение: Метод `classList.contains` возвращает `true`, если класс присутствует.
+---
+11. Удаление класса
+⌛ Задача: Удалите класс `highlight` у элемента.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+element.classList.remove('highlight');
+
+console.log(element.className); // Класс "highlight" удалён
+```
+Объяснение: `classList.remove` удаляет указанный класс.
+---
+12. Переключение класса
+⌛ Задача: Переключите класс `active` на элементе.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+element.classList.toggle('active');
+
+console.log(element.className); // "active" добавлен или удалён
+```
+Объяснение: `classList.toggle` добавляет класс, если его нет, или удаляет, если он есть.
+---
+13. Изменение атрибута `style`
+⌛ Задача: Измените цвет текста элемента на красный.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+element.style.color = 'red';
+
+console.log(element.style.color); // "red"
+```
+Объяснение: `style` позволяет управлять инлайновыми стилями элемента.
+---
+14. Изменение нескольких стилей
+⌛ Задача: Установите ширину и высоту элемента.
+🎯 Решение:
+```javascript
+const element = document.querySelector('div');
+element.style.width = '100px';
+element.style.height = '50px';
+
+console.log(element.style.cssText); // "width: 100px; height: 50px;"
+```
+Объяснение: Используйте `style` для установки нескольких CSS-свойств.
+---
+15. Изменение атрибута через ссылку
+⌛ Задача: Измените значение ссылки (`href`) у тега `<a>`.
+🎯 Решение:
+```javascript
+const link = document.querySelector('a');
+link.setAttribute('href', 'https://example.com');
+
+console.log(link.href); // "https://example.com"
+```
+Объяснение: `setAttribute` изменяет значение атрибутов тега.
+---
+16. Добавление атрибута для нескольких элементов
+⌛ Задача: Добавьте атрибут `data-index` ко всем элементам списка.
+🎯 Решение:
+```javascript
+const items = document.querySelectorAll('li');
+items.forEach((item, index) => {
+  item.setAttribute('data-index', index);
+});
+
+console.log(items[0].dataset.index); // "0"
+```
+Объяснение: Используйте цикл для добавления атрибута ко множеству элементов.
+---
+17. Чтение и изменение `checked` у чекбокса
+⌛ Задача: Установите флажок у чекбокса.
+🎯 Решение:
+```javascript
+const checkbox = document.querySelector('input[type="checkbox"]');
+checkbox.checked = true;
+
+console.log(checkbox.checked); // true
+```
+Объяснение: Свойство `checked` позволяет управлять состоянием флажка.
