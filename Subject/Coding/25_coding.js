@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------
-26
 ⋙ ❍ Реализуйте функцию преобразования URL query строки в JSON?
 ---
+25. 
 const inData = "user.name.firstname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue";
 function queryObjectify(arg) {
 // ??
