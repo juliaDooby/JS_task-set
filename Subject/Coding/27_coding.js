@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------
-28
 ⋙ ❍ Реализуйте функцию/класс для генерации HTML?
 ---
+27. 
 const HTMLConstruct = {};
 HTMLConstruct.span('foo'); // -> <span>foo</span>
 HTMLConstruct.div.span('bar'); // -> <div><span>bar</span></div>
