@@ -1,8 +1,7 @@
 ---------------------------------------------------------------------------------------------
-18
 ⋙ ❍ Реализуйте асинхронный метод filter для Array (должны работать await)?
 ---
-Вот пример реализации асинхронного метода `filterAsync()` для массива, который позволяет использовать `await`:
+17. Вот пример реализации асинхронного метода `filterAsync()` для массива, который позволяет использовать `await`:
 ```javascript
 Array.prototype.filterAsync = async function(predicate) {
   const results = await Promise.all(this.map(async (element, index, array) => {
