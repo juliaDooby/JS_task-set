@@ -3,7 +3,7 @@
 -----
 ⋙ ❍ Поиск элементов:
 В JavaScript можно находить элементы на странице с использованием различных методов. Вот основные варианты:
-1. По ID
+0. По ID
 Метод `document.getElementById()` используется для поиска элемента с определённым `id`.
 ```javascript
 const element = document.getElementById('myId');
@@ -14,7 +14,7 @@ console.log(element);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-2. По имени класса
+1. По имени класса
 Метод `document.getElementsByClassName()` возвращает HTMLCollection всех элементов с определённым классом.
 ```javascript
 const elements = document.getElementsByClassName('myClass');
@@ -25,7 +25,7 @@ console.log(elements); // HTMLCollection
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-3. По имени тега
+2. По имени тега
 Метод `document.getElementsByTagName()` возвращает все элементы с указанным тегом.
 ```javascript
 const elements = document.getElementsByTagName('div');
@@ -36,7 +36,7 @@ console.log(elements); // HTMLCollection
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-4. Универсальный поиск с querySelector
+3. Универсальный поиск с querySelector
 Метод `document.querySelector()` возвращает первый элемент, соответствующий указанному CSS-селектору.
 ```javascript
 const element = document.querySelector('.myClass');
@@ -47,7 +47,7 @@ console.log(element); // Первый элемент с классом myClass
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-5. Множественный выбор с querySelectorAll
+4. Множественный выбор с querySelectorAll
 Метод `document.querySelectorAll()` возвращает статический NodeList всех элементов, соответствующих CSS-селектору.
 ```javascript
 const elements = document.querySelectorAll('.myClass');
@@ -58,7 +58,7 @@ console.log(elements); // NodeList
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-6. По атрибуту
+5. По атрибуту
 Используйте `querySelector` или `querySelectorAll` для поиска по атрибуту.
 ```javascript
 const element = document.querySelector('[data-id="123"]');
@@ -69,7 +69,7 @@ console.log(element);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-7. По имени элемента формы
+6. По имени элемента формы
 Метод `document.getElementsByName()` возвращает все элементы с указанным атрибутом `name`.
 ```javascript
 const elements = document.getElementsByName('username');
@@ -80,7 +80,7 @@ console.log(elements); // NodeList
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-8. По отношению к другому элементу
+7. По отношению к другому элементу
 Вы можете использовать `children`, `parentNode`, `nextElementSibling` и другие свойства DOM для поиска элементов относительно другого.
 ```javascript
 const parent = document.getElementById('parent');
@@ -92,7 +92,7 @@ console.log(child);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-9. По текстовому содержимому
+8. По текстовому содержимому
 Хотя JavaScript напрямую не предоставляет метод для поиска по тексту, можно использовать `textContent` или `innerText`.
 ```javascript
 const elements = Array.from(document.querySelectorAll('p')).filter(el => el.textContent.includes('Hello'));
@@ -103,7 +103,7 @@ console.log(elements);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-10. Использование XPath
+9. Использование XPath
 Метод `document.evaluate()` позволяет выполнять поиск с помощью XPath.
 ```javascript
 const xpathResult = document.evaluate('//div[@class="myClass"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
@@ -114,7 +114,7 @@ console.log(xpathResult.singleNodeValue);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-11. По пользовательскому атрибуту
+10. По пользовательскому атрибуту
 Для кастомных атрибутов можно использовать `querySelector`.
 ```javascript
 const element = document.querySelector('[data-custom="value"]');
@@ -125,7 +125,7 @@ console.log(element);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-12. По контенту (например, тексту кнопки)
+11. По контенту (например, тексту кнопки)
 Если нужно найти элемент по его содержимому:
 ```javascript
 const button = Array.from(document.querySelectorAll('button')).find(btn => btn.textContent === 'Click Me');
@@ -136,7 +136,7 @@ console.log(button);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-13. Использование библиотек (например, jQuery)
+12. Использование библиотек (например, jQuery)
 Если вы используете jQuery, поиск элементов значительно упрощается:
 ```javascript
 const element = $('.myClass'); // Поиск по классу
@@ -147,7 +147,7 @@ console.log(element);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-14. По свойствам элементов
+13. По свойствам элементов
 Можно использовать `querySelector` в сочетании с JavaScript для фильтрации по свойствам:
 ```javascript
 const element = Array.from(document.querySelectorAll('input')).find(el => el.type === 'text');
@@ -158,7 +158,7 @@ console.log(element);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-15. По составным селекторам
+14. По составным селекторам
 Вы можете комбинировать селекторы для более точного поиска:
 ```javascript
 const element = document.querySelector('div.myClass > span.highlight');
@@ -169,7 +169,7 @@ console.log(element);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-16. По классу с использованием contains
+15. По классу с использованием contains
 Если нужно найти элемент, у которого есть определённый класс:
 ```javascript
 const element = Array.from(document.querySelectorAll('.myClass')).find(el => el.classList.contains('special'));
@@ -180,7 +180,7 @@ console.log(element);
 ---------------------------------------------------------------------------------------------  
 ⋙ ❍ Работа с DOM:
 -----
-17. По ближайшему родителю (closest)
+16. По ближайшему родителю (closest)
 Метод `closest` ищет ближайший родительский элемент, соответствующий селектору.
 ```javascript
 const child = document.querySelector('.child');
