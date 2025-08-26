@@ -1,6 +1,6 @@
 # JS.task's Set 🐝
 
-<div align="center"><img src="https://github.com/juliaDooby/JS_task-set/blob/main/assets/images/cover-jsSet.jpg" width="60%" height="15%"></img></div>
+<div align="center"><img src="https://github.com/juliaDooby/JS_task-set/blob/main/assets/images/cover-jsSet.jpg" width="60%" height="50%"></img></div>
 
 💻 **По собственной инициативе, в свободное от работы время Начинаю публиковать задачи по фронтенд-разработке — как базовые, так и более интересные и сложные, которые встречаются мне в работе!**  ⛳
 
