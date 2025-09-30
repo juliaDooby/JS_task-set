@@ -1,4 +1,4 @@
-# JS.task's Set 🐝
+# ๑・JS.task's Set 
 
 <div align="center"><img src="https://github.com/juliaDooby/JS_task-set/blob/main/assets/images/cover-jsSet.jpg" width="60%" height="50%"></img></div>
 
